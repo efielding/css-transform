@@ -16,4 +16,50 @@
 
     /* transform: scale (1, -5);
     transform: scaleY (-5); */
+    float: right;
+}
+
+.box{
+    background-color: grey;
+    height:100px;
+    width: 100px;
+    display: inline-block;
+    margin:20px;
+}
+
+.skew-20{
+    transform: skewX(20deg);
+}
+
+.skew-neg-20{
+    /* transform: skewX(-20deg); */
+    animation: skew-horizontal 3s infinite;
+    animation-direction: alternate;
+}
+
+.skew-neg-50{
+    transform: skewX(-50deg);
+}
+
+.skew-50{
+    animation: skew-vertical 3s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes skew-horizontal{
+    0%{
+        transform: skewX(20deg);
+    }
+    100%{
+        transform:skewX(-20deg);
+    }
+}
+
+@keyframes skew-vertical{
+    0%{
+        transform: skewY(20deg);
+    }
+    100%{
+        transform:skewY(-20deg);
+    }
 }
